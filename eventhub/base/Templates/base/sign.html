@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        
+        {% if page == 'register' %}
+        <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="">Name</label>
+                <input type="text" name="username">
+            </div>
+
+            <div>
+                <label for="">email</label>
+                <input type="email" name="email">
+            </div> 
+
+             <div>
+                <label for="">Password</label>
+                <input type="password" name="password1" placeholder="********">
+            </div>
+
+            <div>
+                <label for="">Password Confirm</label>
+                <input type="password" name="password2" placeholder="********">
+                
+            </div>
+
+            <div>
+                {% for message in messages %}
+                    <p>
+                        {{message}}
+                    </p>
+                {% endfor %}
+            </div>
+
+       
+
+            <button type="submit">
+                Register
+            </button>
+            or
+            <a href="{% url 'login' %}">login</a>
+        </form>
+            
+            
+        
+        {% else %}
+            <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                <div>
+                    <label for="">Name</label>
+                    <input type="text" name="username" placeholder="name or email">
+                </div>
+    
+                <div>
+                    <label for="">Password</label>
+                    <input type="password" name="password" placeholder="********">
+                </div>
+
+                <button type="submit">
+                    Login
+                </button>
+
+                <a href="{% url 'register' %}">Register</a>
+
+                {% for message in messages %}
+                    <p>
+                        {{message}}
+                    </p>
+                {% endfor %}
+            </form>
+           
+           
+        {% endif %}
+       
+   
+</body>
+</html>
