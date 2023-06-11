@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in</title>
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-auth-compat.js"></script>
+
+    <style>
+      /* Import */
+      @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap");
+      /* font-family: 'Quicksand', sans-serif; */
+      /* font-family: 'Rajdhani', sans-serif; */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Quicksand", sans-serif;
+        color: #ffffff;
+      }
+      body {
+    background-image: radial-gradient(#444cf7 0.9px, #e5e5f7 0.9px);
+    background-size: 18px 18px;
+}
+      /* input[type='text'],
+      input[type='email'],
+      input[type='password'] {
+        display: flex;
+      } */
+      /* .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      } */
+      /* .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: solid;
+        width: 45vw;
+        height: 50vh;
+      } */
+      .main {
+        background-color: #5e65f6;
+        padding: 40px;
+        max-width: 500px;
+        margin: auto;
+        margin-top: 75px;
+        border-radius: 10px;
+      }
+      .form {
+        display: flex;
+        flex-direction: column;
+      }
+      h1 {
+        text-align: center;
+        font-size: 3rem;
+        color: #ffffff;
+      }
+      label {
+        font-size: 1.5em;
+        margin-top: 10px;
+        color: #ffffff;
+      }
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        outline: none;
+        color: black;
+        border-radius: 7px;
+        margin-bottom: 20px;
+        margin-top: 7px;
+        font-size: 15px;
+        font-family: "Josefin Sans", sans-serif;
+      }
+      button {
+        /* width: 200px; */
+        margin-top: 10px;
+        height: 55px;
+        font-size: 1.5rem;
+        color: #000000;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 5px 5px 30px #ffffff44;
+        cursor: pointer;
+      }
+
+      /* button[type="submit"] {
+        background-color: #0b2447;
+        color: #fdf2ff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 20px;
+        font-family: "Edu NSW ACT Foundation", cursive;
+        transition: all 0.4s ease-in-out;
+        margin-top: 30px;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #456cb5;
+        font-family: "Edu NSW ACT Foundation", cursive;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Sign in</h1>
+      <div class="form">
+        <label for="email">E-mail</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your e-mail"
+          required
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter your Password"
+          required
+        />
+        <!-- <input
+          style="
+            width: 200px;
+            height: 55px;
+            font-size: 1.5rem;
+            color: #000000;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 5px 5px 30px #ffffff44;
+            cursor: pointer;
+          "
+          type="button"
+          value="submit"
+        /> -->
+        <button id="submit-btn" onclick="signin()">Sign in</button>
+      </div>
+    </div>
+
+    <script>
+      //Setting up firebase
+      const firebaseApp = firebase.initializeApp({
+        apiKey: "AIzaSyDz1t6fFVv4u3-WR18x2_1mFd3onx5jPBI",
+        authDomain: "future-hack.firebaseapp.com",
+        projectId: "future-hack",
+        storageBucket: "future-hack.appspot.com",
+        messagingSenderId: "629269029013",
+        appId: "1:629269029013:web:fa7c77a38f4ad63ad3bb9c",
+        measurementId: "G-QTNKM1GX5R",
+      });
+      const db = firebaseApp.firestore();
+      const auth = firebaseApp.auth();
+
+      //sign up function
+      const signUp = () => {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        console.log(email, password);
+
+        firebase
+          .auth()
+          .createUserWithEmailAndPassword(email, password)
+          .then((result) => {
+            // Signed in
+            document.write("You are signed up");
+            console.log(result);
+            // ...
+          })
+          .catch((error) => {
+            console.log(error.code);
+            console.log(error.message);
+            // ..
+          });
+      };
+
+      //Sign in function
+      const signin = () => {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        firebase
+          .auth()
+          .signInWithEmailAndPassword(email, password)
+          .then((result) => {
+            // Signed in
+            document.write("You are signed in");
+            console.log(result);
+          })
+          .catch((error) => {
+            console.log(erroe.code);
+            console.log(erroe.message);
+          });
+      };
+    </script>
+  </body>
+</html>

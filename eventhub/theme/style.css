@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+/*font-family: 'Lobster', cursive;*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e5e5f7;
+    /* opacity: 0.8; */
+    background-image: radial-gradient(#444cf7 0.9px, #e5e5f7 0.9px);
+    background-size: 18px 18px;
+    /* overflow: hidden; */
+}
+
+/* imports*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: linear-gradient(145deg, rgba(226,91,91,1) 1%, rgba(214,93,227,1) 100%); */
+    background-color: #444cf7;
+    color: #fff;
+    height: 70px;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: rgba(68, 77, 247, 0.68);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin-left: 35px;
+}
+
+.nav-item a {
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    /* border: solid; */
+    font-family: 'DM Serif Display', serif;
+    padding: 10px 30px;
+    border-radius: 10px;
+    /* transition: background-color 0.7s ease;
+transition: padding 0.5s ease-in-out; */
+    transition: all 0.4s ease-in-out;
+}
+
+.nav-item a:hover {
+    /* background:  rgb(119, 98, 255) ; */
+    background-color: #2730d1;
+    padding: 12px 39px;
+    color: #fff;
+    /* font-weight: 600; */
+}
+
+button {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .navbar-menu {
+        display: none;
+        position: relative;
+        top: 140px;
+        right: -13px;
+        border-radius: 9px;
+        width: 30%;
+        background-color: #333;
+        padding: 10px 20px;
+    }
+
+    .navbar-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ano2 {
+        position: absolute;
+        right: 17px;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-menu.active {
+        display: block;
+    }
+
+    .navbar-toggle {
+        display: block;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    .navbar-toggle .icon-bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        border-radius: 2px;
+        margin: 5px 0;
+        background-color: #fff;
+    }
+
+    .nav-item {
+        margin: 10px 20px;
+    }
+
+    .nav-item a:hover {
+        color: var(---white);
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .navbar-menu {
+        display: none;
+        position: relative;
+        top: 140px;
+        right: -13px;
+        border-radius: 9px;
+        width: 60%;
+        background-color: #333;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .navbar-menu {
+        display: none;
+        position: relative;
+        top: 134px;
+        right: -13px;
+        border-radius: 9px;
+        width: 65%;
+        background-color: #333;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 265px) {
+    .navbar-menu {
+        display: none;
+        position: relative;
+        top: 134px;
+        right: -13px;
+        border-radius: 9px;
+        width: 60%;
+        background-color: #333;
+        padding: 10px 20px;
+    }
+}
+
+/* section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 80px 0px;
+} */
+
+section {
+    display: flex;
+    align-items: center;
+    line-height: 55px;
+}
+
+.left {
+    flex: 1;
+    max-width: 650px;
+    font-size: 2.3rem;
+    text-align: center;
+    font-family: 'DM Serif Display', serif;
+    margin: 130px 50px;
+    line-height: 57px;
+    text-align: left;
+
+    /* Add your styles for the left section here */
+}
+
+.left p {
+    line-height: 35px;
+    font-size: 1.5rem;
+    text-align: left;
+    max-width: 800px;
+    margin-top: 10px;
+    font-family: 'Comfortaa', cursive;
+    /* font-family: 'Josefin Sans', sans-serif; */
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right img {
+    max-width: 100%;
+    height: auto;
+    margin: 50px 50px;
+}
+
+.svg {
+    margin-top: -170px;
+}
+
+#lm {
+    margin-top: -5px;
+}
+
+/* .intro h1 {
+    text-align: center;
+    margin: -20px auto;
+    background-color: #444cf7;
+    width: 490px;
+    padding: 15px;
+    font-size: px;
+    border-radius: 100px;
+    color: #fff;
+} */
+
+.intro {
+    text-align: center;
+    padding: 20px;
+}
+
+.intro h1 {
+    font-size: 50px;
+    line-height: 30px;
+    font-family: 'DM Serif Display', serif;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.card1 {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 80px;
+}
+
+.card1 img {
+    height: 300px;
+}
+
+.card1 p {
+    font-size: 2rem;
+    max-width: 710px;
+    font-family: 'Comfortaa', cursive;
+}
+
+@media (max-width: 780px) {
+
+    .card1 {
+        flex-direction: column;
+    }
+
+}

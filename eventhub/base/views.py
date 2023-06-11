@@ -72,5 +72,9 @@ def loginUser(request):
 
     return render(request,'base/sign.html',context)
 
+def logoutUser(request):
+    logout(request)
+    return redirect('login')
+
 def home(request):
     return render(request, 'base/home.html')

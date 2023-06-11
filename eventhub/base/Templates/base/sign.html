@@ -1,15 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    {% if page == 'register' %}
+        <title>Sign In</title>
+    {% else %}
+        <title> Sign Up</title>
+    {% endif %}
 </head>
 <body>
     
         
-        {% if page == 'register' %}
-        <form action="{% url 'register' %}" method="post">
+       
+        <!-- <form action="{% url 'register' %}" method="post">
             {% csrf_token %}
             <div>
                 <label for="">Name</label>
@@ -47,12 +52,129 @@
             </button>
             or
             <a href="{% url 'login' %}">login</a>
-        </form>
-            
-            
-        
+        </form> -->
+
+        <!-- Genesis of actual template -->
+        <style>
+            /* Import */
+            @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap");
+            /* font-family: 'Quicksand', sans-serif; */
+            /* font-family: 'Rajdhani', sans-serif; */
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+              font-family: "Quicksand", sans-serif;
+              color: #ffffff;
+            }
+            body {
+            background-image: radial-gradient(#444cf7 0.9px, #e5e5f7 0.9px);
+            background-size: 18px 18px;
+            }
+            .main {
+              background-color: #5e65f6;
+              padding: 40px;
+              max-width: 500px;
+              margin: auto;
+              margin-top: 75px;
+              border-radius: 10px;
+            }
+            .form {
+              display: flex;
+              flex-direction: column;
+            }
+            h1 {
+              text-align: center;
+              font-size: 3rem;
+              color: #ffffff;
+            }
+            label {
+              font-size: 1.5em;
+              margin-top: 10px;
+              color: #ffffff;
+            }
+            input[type="text"],
+            input[type="email"],
+            input[type="password"] {
+              width: 100%;
+              padding: 15px;
+              border: none;
+              outline: none;
+              color: black;
+              border-radius: 7px;
+              margin-bottom: 20px;
+              margin-top: 7px;
+              font-size: 15px;
+              font-family: "Josefin Sans", sans-serif;
+            }
+            button {
+              /* width: 200px; */
+              margin-top: 10px;
+              height: 55px;
+              font-size: 1.5rem;
+              color: #000000;
+              border: none;
+              border-radius: 10px;
+              box-shadow: 5px 5px 30px #ffffff44;
+              cursor: pointer;
+            }
+      
+           
+          </style>
+
+        {% if page == 'register' %}
+          <form action="" method="post">
+            {% csrf_token %}
+            <div class="main">
+                <h1>Sign up</h1>
+                <div class="form">
+                  <label for="text">Name</label>
+                  <input
+                    type="text"
+                    name="username"
+                    id="name"
+                    placeholder="Enter your full name"
+                    required
+                    autofocus
+                  />
+                  <label for="email">E-mail</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter your e-mail"
+                    
+                  />
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    name="password1"
+                    id="password"
+                    placeholder="Enter your Password"
+                    required
+                  />
+                  <label for="password">Password Confirm </Canvas></label>
+                  <input
+                    type="password"
+                    name="password2"
+                    id="password"
+                    placeholder="Enter your Password"
+                    required
+                  />
+                 
+                  <button id="submit-btn" type="submit" >Sign up</button>
+                  <a
+                    style="color: rgb(255, 255, 255); text-align: right; margin-top: 20px"
+                    href="{% url 'login' %}"
+                    >Already have an account sign in</a
+                  >
+                </div>
+              </div>
+          </form>
+      
         {% else %}
-            <form action="{% url 'login' %}" method="post">
+            <!-- <form action="{% url 'login' %}" method="post">
                 {% csrf_token %}
                 <div>
                     <label for="">Name</label>
@@ -76,8 +198,49 @@
                     </p>
                 {% endfor %}
             </form>
-           
-           
+            -->
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="main">
+                    <h1>Sign In</h1>
+                    <div class="form">
+                      <label for="text">Name</label>
+                      <input
+                        type="text"
+                        name="username"
+                        id="name"
+                        placeholder="Enter your full name"
+                        required
+                        autofocus
+                      />
+                      <label for="email">E-mail</label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Enter your e-mail"
+                        
+                      />
+                      <label for="password">Password</label>
+                      <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Enter your Password"
+                        required
+                      />
+                      
+                     
+                      <button id="submit-btn" type="submit" >Sign In</button>
+                      <a
+                        style="color: rgb(255, 255, 255); text-align: right; margin-top: 20px"
+                        href="{% url 'register' %}"
+                        >Havent sign up yet sign up</a
+                      >
+                    </div>
+                  </div>
+              </form>
+
         {% endif %}
        
    

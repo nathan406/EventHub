@@ -1,15 +1,36 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {% if user.is_authenticated %}
-        <div>you are in {{user.username}}</div>
-    {% else %}
-        <div>you are not logged in</div>
-    {% endif %}
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - EventHub</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+  </head>
+  <body>
+    <nav id="nav" class="navbar">
+      <div class="logo">
+        <p style="cursor: pointer">
+          <a href="#nav" style="text-decoration: none; color: #fff">EventHub</a>
+        </p>
+      </div>
+      <div class="navigation">
+        <ul>
+          <div class="searchbox">
+            <input type="text" name="search" placeholder="Search.." />
+            <img src="{% static 'media/Search.svg' %}" />
+          </div>
+          <li><a href="#nav">Home</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="{% url 'logout' %}">logout</a></li>
+          <li class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </body>
 </html>
