@@ -50,7 +50,7 @@ body {
 
 .navbar-nav {
     display: flex;
-    list-style: none;
+    /* list-style: none; */
 }
 
 .nav-item {
