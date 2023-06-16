@@ -34,13 +34,26 @@ body {
     opacity: 1;
   }
   .active.fade-bottom {
-    animation: fade-bottom 3s ease-in;
+    animation: fade-bottom 1s ease-in;
   }
   .active.fade-left {
-    animation: fade-left 3s ease-in;
+    animation: fade-left 1s ease-in;
   }
   .active.fade-right {
-    animation: fade-right 3s ease-in;
+    animation: fade-right 1s ease-in;
+  }
+  .active.fade-top{
+    animation: fade-top 1s ease-in;
+  }
+  @keyframes fade-top{
+    0% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
   @keyframes fade-bottom {
     0% {
@@ -73,11 +86,6 @@ body {
       opacity: 1;
     }
   }
-
-
-
-
-
 
 
 /* imports*/
@@ -329,11 +337,13 @@ section {
     }
 }
 
+
 .cards {
     display: flex;
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
+    padding-bottom: 10rem;
 }
 
 .card1 {

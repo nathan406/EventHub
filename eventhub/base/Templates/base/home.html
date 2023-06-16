@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - EventHub</title>
+    <title>Home </title>
     <link rel="stylesheet" href="{% static 'css/home.css' %}" />
   </head>
   <body>
@@ -17,13 +17,21 @@
       </div>
       <div class="navigation">
         <ul>
-          <div class="searchbox">
-            <input type="text" name="search" placeholder="Search.." />
-            <img src="{% static 'media/Search.svg' %}" />
-          </div>
+         
           <li><a href="#nav">Home</a></li>
           <li><a href="#">Events</a></li>
-          <li><a href="{% url 'logout' %}">logout</a></li>
+          <li></li>
+
+          <div class="dropdown">
+            <img src="{% static 'media/user-icon.webp' %}" class="user-icon" alt="" > 
+            <p>{{user.username}}</p>
+        
+            <div class="dropdown-content">
+              <a href="#">Profile</a>
+              <a href="{% url 'logout' %}">logout</a>
+            </div>
+          </div>
+
           <li class="hamburger">
             <span></span>
             <span></span>
@@ -31,6 +39,127 @@
           </li>
         </ul>
       </div>
+
     </nav>
+
+    <section>
+      <div class="searchbox">
+        <div class="srch">
+          <input type="text" name="search" placeholder="Search Events.." />
+        </div>
+        <div class="txts">
+            <p>All</p>
+            <p>Online</p>
+            <p>In-person</p>
+            <p>Today</p>
+            <p>Concert</p>
+            <p>Meet-up</p>
+            <p>This weekend</p>
+        </div>
+      </div>
+    </section>
+   
+
+    <section>
+      <div class="events-container">
+        <div class="event">
+          <div>
+            <img src="{% static 'media/event1.jpg' %}" class="eventimg" alt="">
+          </div>
+
+          <div>
+            <h2>Event Name</h2>
+          </div>
+          
+          <div class="">
+            <button>View Event</button>
+            
+          </div>
+         
+        </div>
+
+        <div class="event">
+          <div>
+            <img src="{% static 'media/event1.jpg' %}" class="eventimg" alt="">
+          </div>
+
+          <div>
+            <h2>Event Name</h2>
+          </div>
+          
+          <div class="">
+            <button>View Event</button>
+            
+          </div>
+         
+        </div>
+
+        <div class="event">
+          <div>
+            <img src="{% static 'media/event1.jpg' %}" class="eventimg" alt="">
+          </div>
+
+          <div>
+            <h2>Event Name</h2>
+          </div>
+          
+          <div class="">
+            <button>View Event</button>
+            
+          </div>
+         
+        </div>
+
+        <div class="event">
+          <div>
+            <img src="{% static 'media/event1.jpg' %}" class="eventimg" alt="">
+          </div>
+
+          <div>
+            <h2>Event Name</h2>
+          </div>
+          
+          <div class="">
+            <button>View Event</button>
+            
+          </div>
+         
+        </div>
+
+        <div class="event">
+          <div>
+            <img src="{% static 'media/event1.jpg' %}" class="eventimg" alt="">
+          </div>
+
+          <div>
+            <h2>Event Name</h2>
+          </div>
+          
+          <div class="">
+            <button>View Event</button>
+            
+          </div>
+         
+        </div>
+
+        <div class="event">
+          <div>
+            <img src="{% static 'media/event1.jpg' %}" class="eventimg" alt="">
+          </div>
+
+          <div>
+            <h2>Event Name</h2>
+          </div>
+          
+          <div class="">
+            <button>View Event</button>
+            
+          </div>
+         
+        </div>
+      </div>
+    </section>
+
+
   </body>
 </html>
