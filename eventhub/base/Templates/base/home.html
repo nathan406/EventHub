@@ -23,11 +23,11 @@
           <li></li>
 
           <div class="dropdown">
-            <img src="{% static 'media/user-icon.webp' %}" class="user-icon" alt="" > 
+            <img src="{% static 'media/home/user-icon.webp' %}" class="user-icon" alt="" > 
             <p>{{user.username}}</p>
         
             <div class="dropdown-content">
-              <a href="#">Profile</a>
+              <a href="{% url 'profile' %}">Profile</a>
               <a href="{% url 'logout' %}">logout</a>
             </div>
           </div>
@@ -41,6 +41,8 @@
       </div>
 
     </nav>
+
+    
 
     <section>
       <div class="searchbox">
@@ -59,16 +61,24 @@
       </div>
     </section>
    
+    
+    <div class="create">
+      <a href="{% url 'create' %}">
+        <button>create event</button>
+      </a>
+     
+    </div>
 
     <section>
       <div class="events-container">
+
         <div class="event">
           <div>
-            <img src="{% static 'media/event1.jpg' %}" class="eventimg" alt="">
+            <img src="{% static 'media/home/event2.webp' %}" class="eventimg" alt="">
           </div>
 
           <div>
-            <h2>Event Name</h2>
+            <h2>Night Party</h2>
           </div>
           
           <div class="">
@@ -80,11 +90,11 @@
 
         <div class="event">
           <div>
-            <img src="{% static 'media/event1.jpg' %}" class="eventimg" alt="">
+            <img src="{% static 'media/home/event3.webp' %}" class="eventimg" alt="">
           </div>
 
           <div>
-            <h2>Event Name</h2>
+            <h2>Praise And Worship</h2>
           </div>
           
           <div class="">
@@ -96,11 +106,11 @@
 
         <div class="event">
           <div>
-            <img src="{% static 'media/event1.jpg' %}" class="eventimg" alt="">
+            <img src="{% static 'media/home/event4.webp' %}" class="eventimg" alt="">
           </div>
 
           <div>
-            <h2>Event Name</h2>
+            <h2>Grateful Heart</h2>
           </div>
           
           <div class="">
@@ -112,11 +122,11 @@
 
         <div class="event">
           <div>
-            <img src="{% static 'media/event1.jpg' %}" class="eventimg" alt="">
+            <img src="{% static 'media/home/event5.webp' %}" class="eventimg" alt="">
           </div>
 
           <div>
-            <h2>Event Name</h2>
+            <h2>New Year Party</h2>
           </div>
           
           <div class="">
@@ -128,31 +138,18 @@
 
         <div class="event">
           <div>
-            <img src="{% static 'media/event1.jpg' %}" class="eventimg" alt="">
+            <img src="{% static 'media/home/event1.jpg' %}" class="eventimg" alt="">
           </div>
 
           <div>
-            <h2>Event Name</h2>
+            <h2>Summer Pool Party</h2>
           </div>
           
           <div class="">
-            <button>View Event</button>
+            <a href="{% url 'event' %}">
+              <button>View Event</button>
+            </a>
             
-          </div>
-         
-        </div>
-
-        <div class="event">
-          <div>
-            <img src="{% static 'media/event1.jpg' %}" class="eventimg" alt="">
-          </div>
-
-          <div>
-            <h2>Event Name</h2>
-          </div>
-          
-          <div class="">
-            <button>View Event</button>
             
           </div>
          

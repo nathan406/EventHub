@@ -1,0 +1,16 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+<title>Event</title>
+
+<nav id="nav" class="navbar">
+    <p style="cursor: pointer">
+      <a href="{% url 'home' %}" style="text-decoration: none; color: #fff">
+        EventHub
+      </a>
+    </p>
+  </nav>
+
+  {% block content %}
+
+  {% endblock %}

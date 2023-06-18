@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-family: "DM Serif Display", serif;
+  background-color: #444cf7;
+  color: #fff;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: rgba(68, 77, 247, 0.68);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.btn input[type="button"] {
+  margin: 15px 15px;
+  padding: 17px 40px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #5162ffde;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn input[type="button"]:hover {
+  background-color: #4851f0;
+}

@@ -192,6 +192,22 @@ input[type="text"]:focus {
 
 }
 
+.create button{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  background-color:#4851f0 ;
+  color: white;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.create a{
+  text-decoration: none;
+}
+
 /* Events */
 
 .events-container{
@@ -200,6 +216,7 @@ input[type="text"]:focus {
   grid-template-columns: 1fr 1fr 1fr 1fr ;
   padding-top: 5rem;
   grid-row-gap:5rem;
+  padding: 5rem;
 }
 
 .event{
@@ -222,9 +239,9 @@ input[type="text"]:focus {
 }
 
 .event button{
-  background-color: #6a71ffe1;;
+  background-color: #3943f2e1;;
   color: white;
   padding: 8px;
   border: none;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }

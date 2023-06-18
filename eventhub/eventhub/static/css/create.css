@@ -1,0 +1,108 @@
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: radial-gradient(#444cf7 0.9px, #e5e5f7 0.9px);
+    background-size: 18px 18px;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Existing CSS code */
+
+.title-overlay {
+  position: relative;
+  background-color: rgba(68, 77, 247, 0.8);
+  padding: 20px;
+  text-align: center;
+}
+
+.title-overlay h1 {
+  color: #fff;
+  font-size: 2rem;
+  font-family: 'DM Serif Display', serif;
+}
+
+h2{
+    padding-top:3rem ;
+    padding-bottom: 3rem;
+}
+
+form{
+    padding-top: 2rem;
+}
+
+.inputs{
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+.form-group .file{
+    background-color: white;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #444cf7;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.3rem;
+}
+
+input,
+textarea {
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100px;
+    padding: 10px;
+    background-color: #444cf7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: auto;
+}
+
+button[type="submit"]:hover {
+    background-color: #202aea;
+}

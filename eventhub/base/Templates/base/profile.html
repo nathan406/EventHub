@@ -1,0 +1,51 @@
+{% extends 'navbar.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="profile">
+            <div>
+                <img src="{% static 'media/Profile/user-icon.png' %}" alt="">
+            </div>
+        </div>
+        
+        <div class="details">
+            <div>
+                <div class="form-group">
+                    <label for="">Username</label>
+                    <p>Niharika Pathuri</p>
+                </div>  
+            </div>
+
+            <div>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <p>Niharika@gmail.com</p>
+                </div>  
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div class="edit">
+        <button>
+            Edit
+        </button>
+    </div>
+</body>
+</html>
+
+{% endblock content %}

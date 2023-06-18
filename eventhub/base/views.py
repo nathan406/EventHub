@@ -78,3 +78,12 @@ def logoutUser(request):
 
 def home(request):
     return render(request, 'base/home.html')
+
+def event(request):
+    return render(request, 'base/event.html')
+
+def create(request):
+    return render(request, 'base/create.html')
+
+def profile(request):
+    return render(request, 'base/profile.html')

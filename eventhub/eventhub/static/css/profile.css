@@ -1,0 +1,57 @@
+body {
+    background-image: radial-gradient(#444cf7 0.9px, #e5e5f7 0.9px);
+    background-size: 18px 18px;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+p{
+    font-size: 2rem;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2rem;
+    gap: 3rem;
+}
+
+
+
+.details{
+    margin-top: 5rem;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+}
+
+label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #444cf7;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.3rem;
+}
+
+input{
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #8c8989;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+}
+
+.edit button{
+    background-color: #444cf7;
+    color: white;
+    padding: 0.7rem;
+    margin: auto;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+}

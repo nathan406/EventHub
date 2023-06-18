@@ -1,0 +1,82 @@
+{% extends 'navbar.html' %}
+
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/event.css' %}">
+    <title>Event </title>
+  </head>
+  <body>
+
+    <section>
+      <div class="cover-img">
+        <img src="{% static 'media/event/cover1.webp' %}" alt="">
+      </div>
+      <h1></h1>
+    </section>
+
+    <div class="title">
+      <h1>Summer Pool Party</h1>
+    </div>
+
+    <div class="event-container">
+      
+      <div class="event-details">
+        <h2>
+          When And Where
+        </h2>
+        <div class="details">
+          <div>
+            
+          </div>
+          <div class="date">
+            <img src="{% static 'media/Event/calendar.png' %}" alt="">
+            <p>21/8/2023</p>
+          </div>
+          <div class="location">
+            <img src="{% static 'media/Event/location.png' %}" alt="">
+            <p>Maddison square garden</p>
+          </div>
+        </div>
+        <div>
+          <h2>
+            About
+          </h2>
+        </div>
+        <div class="about">
+          <p>
+            Sed ac elit gravida, congue risus et, aliquam nulla. Quisque id tellus ac nunc scelerisque facilisis porta sed ex. Maecenas vel augue sapien. Mauris congue venenatis gravida. Morbi pulvinar placerat sapien, vitae egestas dolor aliquet non. Donec id ex maximus sem tempor imperdiet. Cras ac elit ac ante rhoncus sollicitudin quis venenatis metus. Sed congue, tellus quis tincidunt vehicula, lectus tellus vestibulum augue, eget placerat nisl ipsum non tortor. Duis auctor erat sit amet sapien varius fermentum. In hac habitasse platea dictumst. Proin neque lacus, iaculis at molestie id, pharetra id metus. Proin scelerisque dui eget blandit tempus. Nam cursus leo sed lacus posuere venenatis. Maecenas ipsum erat, ullamcorper elementum blandit vel, sagittis elementum quam. Cras lacinia orci at tristique viverra. Vestibulum pretium purus non velit commodo condimentum
+          </p>
+  
+          <p>
+            Sed nec pulvinar purus, et placerat massa. Mauris mi risus, lobortis eget mattis id, ultrices ac eros. Donec eget feugiat ipsum. Curabitur iaculis, nunc in iaculis consectetur, dolor urna volutpat est, a eleifend est libero eu augue. Vestibulum consequat tortor a libero ultrices, at rhoncus mauris varius. Aenean feugiat ultricies fermentum. Morbi ex nunc, rutrum feugiat volutpat eget, venenatis id eros. Pellentesque tellus quam, tempus et lobortis et, ullamcorper vitae dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed venenatis non massa ut iaculis. Aenean lobortis ornare sem, vel gravida tortor sollicitudin a. Nulla metus justo, facilisis nec lacinia ac, tempus vel augue. Suspendisse ornare ante ac metus aliquet imperdiet
+          </p>
+        </div>
+        <h2>Tags</h2>
+        <div class="tags">
+          <p>pool</p>
+          <p>party</p>
+          <p>meetup</p>
+          <p>fun</p>
+        </div>
+      </div>
+
+      <div class="sponsor">
+        <h2>Sponsor</h2>
+        <div class="logo">
+          <img src="{% static 'media/Event/Sponsor1.PNG' %}" alt="">
+        </div>
+      </div>
+      
+    </div>
+
+  </body>
+</html>
+
+{% endblock %}
